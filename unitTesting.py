@@ -1,4 +1,4 @@
-import unittest
+import unittest #import class module
 
 
 
@@ -7,25 +7,26 @@ import unittest
 ############################################
 
 
-class TestStringMethods(unittest.TestCase):
+class TestStringMethods(unittest.TestCase):#Create class from the imports
 
-    def test_upper(self):
-        self.assertEqual('foo'.upper(), 'FOO')
+   #------------------------------Create 3 different functions
 
-
-    def test_isupper(self):
-
-        self.assertTrue('FOO'.isupper())
-        self.assertFalse('Foo'.isupper())
-
-def test_split(self):
-
-    s = 'hello world'
-    self.assertEqual(s.split(), ['hello', 'world']}
+    def test_upper(self):#Creating a function for the test calling it self
+        self.assertEqual('foo'.upper(), 'FOO')#Check if its uppercase
 
 
+    def test_isupper(self):#Create another function
+        self.assertTrue('FOO'.isupper())#Checks if it has an actual upper case
+        self.assertFalse('Foo'.isupper())#Checks the upper case
+
+    def test_split(self):#Create  function
+        s = 'hello world'#Creating a variable called s
+        self.assertEqual(s.split(), ['hello', 'world']}#Pass in string into brackets
+
+#Check that s.split fails when the seperator is not a string
+                         
     with self.assertRaises(TypeError):
         s.split(2)
 
-if __name__ == '__main__':
-    unittest.main()
+if __name__ == '__main__':#Call the main function
+    unittest.main()#Calls function
